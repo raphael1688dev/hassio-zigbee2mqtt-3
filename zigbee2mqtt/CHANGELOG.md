@@ -1,15 +1,6 @@
-## [Unreleased]
+## 1.42.0-2
 
-- Zigbee2MQTT configuration is now by default stored in the addon specific configuration directory rather than the main `config` directory.  
-  This is required for Home Assistant's backup functionality to work correctly.  
-  New installations and installations using the default settings will automatically migrate to the new path, existing setups with custom settings will continue to work but need to be manually migrated to make use of Home Assistant's backups:
-
-  1. Stop the addon
-  2. Move the `/mnt/data/supervisor/homeassistant/zigbee2mqtt` folder to `/mnt/data/supervisor/addon_configs/45df7312_zigbee2mqtt/zigbee2mqtt` (for example using SSH/SMB or the File Explorer/VSCode addon)
-  3. Go to the addon config and change the `data_path` from `/config/zigbee2mqtt` to `/addon_config/zigbee2mqtt`
-  4. Start the addon
-
-- Mount addon specific configuration into the addon container (`/addon_config`)
+- Attempt to fix https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/issues/664
 
 ## 1.42.0-1
 
@@ -18,6 +9,10 @@
 ## 1.41.0-1
 
 - Updated Zigbee2MQTT to version [`1.41.0`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.41.0)
+
+## [Unreleased]
+
+- Mount addon specific configuration into the addon container (`/addon_config`)
 
 ## 1.40.2-1
 

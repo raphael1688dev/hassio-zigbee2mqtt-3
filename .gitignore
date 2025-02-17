@@ -1,5 +1,8 @@
 repository.json
 
+zigbee2mqtt-edge
+zigbee2mqtt-proxy
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
